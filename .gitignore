@@ -24,3 +24,6 @@ jni/vim/
 
 # Vim session file
 vim-session
+.classpath
+.project
+.ssh/

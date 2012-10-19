@@ -2,7 +2,7 @@
 
 SDK=$ANDROID_SDK_HOME
 
-if [ -f $SDK/tools/android ] ; then
+if [ -f $SDK/tools/android.bat ] ; then
     echo Android SDK found, OK
 else
     echo Android SDK not found. Please export ANDROID_SDK_HOME. Exiting.
@@ -27,8 +27,8 @@ cd ..
 android_platform=`ls -1 $SDK/platforms | sort -t- -k2n | tail -1`
 echo $android_platform
 
-$SDK/tools/android update lib-project -p libraries/emulatorview/ -t $android_platform
-$SDK/tools/android update lib-project -p libraries/FileExplorer/ -t $android_platform
-$SDK/tools/android update project -p . -t $android_platform
+$SDK/tools/android.bat update lib-project -p libraries/emulatorview/ -t $android_platform
+$SDK/tools/android.bat update lib-project -p libraries/FileExplorer/ -t $android_platform
+$SDK/tools/android.bat update project -p . -t $android_platform
 
 # You're now ready to `$NDK/ndk-build` and `ant debug`
