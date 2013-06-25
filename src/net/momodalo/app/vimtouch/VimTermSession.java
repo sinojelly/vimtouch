@@ -138,6 +138,7 @@ public class VimTermSession extends TermSession {
         StringBuilder checkedPath = new StringBuilder(path.length());
         for (String dirname : dirs) {
             File dir = new File(dirname);
+            // Jelly: check the dir whether it can be execute? not the file in the dir? why?
             if (dir.isDirectory() && FileCompat.canExecute(dir)) {
                 checkedPath.append(dirname);
                 checkedPath.append(":");

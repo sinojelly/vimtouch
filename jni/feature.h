@@ -375,6 +375,7 @@
 /*
  * +cscope		Unix only: Cscope support.
  */
+# define FEAT_CSCOPE
 #if defined(UNIX) && defined(FEAT_BIG) && !defined(FEAT_CSCOPE) && !defined(MACOS_X)
 # define FEAT_CSCOPE
 #endif
